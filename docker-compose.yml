@@ -8,8 +8,8 @@ services:
     ports: 
       - "5432:5432"
     volumes: 
-      - /Users/rajeshp/docker/postgres/docker-pg-vol/data:/var/lib/postgresql/data
-      - /Users/rajeshp/docker/postgres/init/initData.sql:/docker-entrypoint-initdb.d/initData.sql
+      - /Users/path/docker/postgres/docker-pg-vol/data:/var/lib/postgresql/data
+      - /Users/path/docker/postgres/init/initData.sql:/docker-entrypoint-initdb.d/initData.sql
 version: "3"
 volumes: 
   pg-data: 
