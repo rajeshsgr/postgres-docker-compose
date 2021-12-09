@@ -1,0 +1,16 @@
+services: 
+  db: 
+    container_name: docker_pg
+    environment: 
+      POSTGRES_DB: northwind
+      POSTGRES_PASSWORD: changeme
+    image: "postgres:12"
+    ports: 
+      - "5432:5432"
+    volumes: 
+      - /Users/rajeshp/docker/postgres/docker-pg-vol/data:/var/lib/postgresql/data
+      - /Users/rajeshp/docker/postgres/init/initData.sql:/docker-entrypoint-initdb.d/initData.sql
+version: "3"
+volumes: 
+  pg-data: 
+    driver: local
